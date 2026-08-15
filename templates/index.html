@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop game</title>
+</head>
+<body>
+    <h1>Магаз игры Айса</h1>
+
+    <style>
+        body{
+            background-color: rgb(206, 233, 233);
+            color:rgb(21, 19, 19); 
+        }
+        a{
+            color: rgb(16, 15, 13);
+        }
+    </style>
+
+    {% for game in games %}
+    <img src="/static/images/{{ game.image }}" width="150">
+    <p>
+        <a href="/game/{{ game.id }}">{{ game.title }}</a>
+    </p>
+    {% endfor %}
+
+</body>
+</html>
